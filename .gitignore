@@ -1,5 +1,8 @@
-# Compiled
-*.elc
+#Temp files
+*~
 
 # Packaging
 .cask
+
+
+elpa
