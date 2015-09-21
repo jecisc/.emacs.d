@@ -3,12 +3,12 @@
 ;; no more ugly screen at the beginning
 (setq inhibit-startup-screen t) 
 
-  ;;(cd "C:/Users/JeCisC/Desktop")
+;;(cd "C:/Users/JeCisC/Desktop")
 ;;(setq default-directory "~/Desktop/")
 (setq default-directory (expand-file-name "~/"))
 
- ;; I add the lisp folder to the load path
-(add-to-list 'load-path "~/.emacs.d/lisp/")
+;; I add the lisp folder to the load path
+;; (add-to-list 'load-path "~/.emacs.d/lisp/")
 
 (autoload 'flyspell-mode "flyspell" "On-the-fly spelling checker." t)
 
