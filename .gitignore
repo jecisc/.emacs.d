@@ -4,5 +4,6 @@
 # Packaging
 .cask
 
-
+#Folders
+backups/ #Do not save backups files
 elpa

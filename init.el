@@ -10,6 +10,16 @@
 ;; I add the lisp folder to the load path
 ;; (add-to-list 'load-path "~/.emacs.d/lisp/")
 
+;;Backup files~
+(setq
+ backup-by-copying t ;; copy files and don't rename them
+ backup-directory-alist (quote (("." . "~/.emacs.d/backups"))) ;;The temp files should be store into backup directory.
+ delete-old-versions t ;; do not ask me to delete backups
+ kept-new-versions 6
+ kept-old-versions 10
+ version-control t
+)
+
 (autoload 'flyspell-mode "flyspell" "On-the-fly spelling checker." t)
 
 (require 'package)
