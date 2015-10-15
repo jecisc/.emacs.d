@@ -7,3 +7,7 @@
 #Folders
 backups/ #Do not save backups files
 elpa
+
+#Files
+eshell/history
+eshell/lastdir
