@@ -31,9 +31,18 @@
 (package-initialize)
 
 
+;; Path (Copy of Damien init.el)
+(defun add-to-executable-path (path)
+  (let ((expanded-path (expand-file-name path)))
+    (add-to-list 'exec-path expanded-path)
+    (setenv "PATH" (concat expanded-path ":" (getenv "PATH")))))
+
 ;; Use Cask
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
+
+
+(mapc 'add-to-executable-path '("~/.cask/bin"))
 
 
 (custom-set-variables
@@ -55,3 +64,28 @@
   "open up a guaranteed new scratch buffer"
  (interactive)
   (switch-to-buffer (make-temp-name "scratch")))
+
+
+;; For now I add the each package, see the answer of Damien to improve
+
+;;> Et comme j'ai vu sur la doc de Cask j'ai fait: cask install
+;;> J'ai désormais un dossier pillar-20141112.1011 dans .
+;;> emacs.d/.cask/24.4.1/elpa/
+;;> cependant quand je suis dans emacs je n'ai toujours pas le
+;;> pillar-mode.
+;;
+;;c'est normal. Cask se charge de télécharger les paquets dans le .cask et
+;;de les ajouter dans la variable 'load-path. C'est à toi de demander à
+;;Emacs de charger ce que tu veux quand tu le veux. Le plus simple est
+;;d'ajouter un require pour chaque paquet que tu veux charger :
+;;
+;;(require 'pillar)
+;;
+;;Quand tu auras de nombreux paquets, il faudra faire les choses un peu
+;;plus intelligemment car la ligne ci-dessus charge Pillar lors du
+;;lancement d'Emacs alors qu'a priori tu n'en as besoin que lorsque tu
+;;édites un fichier .pillar ou .pier. Mais tu pourras voir ça plus tard
+;;(moi j'utilise use-package pour faire ça).
+
+(require 'pillar)
+(require 'jdee)
