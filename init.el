@@ -1,24 +1,5 @@
-;; no more big toolbar
-(tool-bar-mode -1)
-;; no more ugly screen at the beginning
-(setq inhibit-startup-screen t) 
-
-;;(cd "C:/Users/JeCisC/Desktop")
-;;(setq default-directory "~/Desktop/")
-(setq default-directory (expand-file-name "~/"))
-
 ;; I add the lisp folder to the load path
 ;; (add-to-list 'load-path "~/.emacs.d/lisp/")
-
-;;Backup files~
-(setq
- backup-by-copying t ;; copy files and don't rename them
- backup-directory-alist (quote (("." . "~/.emacs.d/backups"))) ;;The temp files should be store into backup directory.
- delete-old-versions t ;; do not ask me to delete backups
- kept-new-versions 6
- kept-old-versions 10
- version-control t
-)
 
 (autoload 'flyspell-mode "flyspell" "On-the-fly spelling checker." t)
 
@@ -51,8 +32,23 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector
-   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
- '(custom-enabled-themes (quote (deeper-blue))))
+   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"]);;THEME
+ '(custom-enabled-themes (quote (deeper-blue))) ;;THEME
+ '(default-directory (expand-file-name "~/") ;; Default directory into the home for windows
+ '(inhibit-startup-screen t) ;; no more ugly screen at the beginning
+ '(menu-bar-mode nil) ;; no more menu bar
+ '(tool-bar-mode nil) ;; no more big toolbar
+
+ ;; BACKUP FILES
+ '(backup-by-copying t) ;; copy files and don't rename them
+ '(backup-directory-alist (quote (("." . "~/.emacs.d/backups")))) ;;The temp files should be store into backup directory.
+ '(delete-old-versions t) ;; do not ask me to delete backups
+ '(kept-new-versions 6) ;; keep 6 new versions
+ '(kept-old-versions 10) ;; keep 10 old versions
+ '(version-control t) ;; I want a version controle on the backup files
+
+ 
+ )
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
