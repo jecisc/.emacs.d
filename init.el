@@ -61,6 +61,12 @@
  (interactive)
   (switch-to-buffer (make-temp-name "scratch")))
 
+(defun nxml-pretty-format ()
+    (interactive)
+    (save-excursion
+        (shell-command-on-region (point-min) (point-max) "xmllint --format -" (buffer-name) t)
+        (nxml-mode)
+        (indent-region begin end)))
 
 ;; For now I add the each package, see the answer of Damien to improve
 
