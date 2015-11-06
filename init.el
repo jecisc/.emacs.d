@@ -31,20 +31,6 @@
 ;; I add the lisp folder to the load path
 ;; (add-to-list 'load-path "~/.emacs.d/lisp/")
 
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/"))
-(when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
-(package-initialize)
-
-;; Use Cask
-(require 'cask "~/.cask/cask.el")
-(cask-initialize)
-
-(mapc 'add-to-executable-path '("~/.cask/bin"))
-
 ;;PERSONNAL FUNCTIONS
 
 ;; Path (Copy of Damien init.el)
@@ -64,6 +50,22 @@
         (shell-command-on-region (point-min) (point-max) "xmllint --format -" (buffer-name) t)
         (nxml-mode)
         (indent-region begin end)))
+
+
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/"))
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize)
+
+;; Use Cask
+(require 'cask "~/.cask/cask.el")
+(cask-initialize)
+
+(mapc 'add-to-executable-path '("~/.cask/bin"))
+
 
 ;; For now I add the each packages of cask, see the answer of Damien to improve
 
