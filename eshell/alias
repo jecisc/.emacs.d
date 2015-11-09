@@ -1,2 +1,3 @@
 alias subupdate git submodule foreach git pull origin master
 alias myPush git push -u origin master
+alias la ls -a
