@@ -1,2 +1,4 @@
 alias subupdate git submodule foreach git pull origin master
 alias myPush git push -u origin master
+alias intellij ~/idea-IU-143.381.42/bin/idea.sh &
+alias .emacs cd ~/.emacs.d/
