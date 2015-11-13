@@ -31,6 +31,9 @@
 ;; I add the lisp folder to the load path
 ;; (add-to-list 'load-path "~/.emacs.d/lisp/")
 
+;; Make all "yes or no" prompts show "y or n" instead
+(fset 'yes-or-no-p 'y-or-n-p)
+
 ;;PERSONNAL FUNCTIONS
 
 ;; Path (Copy of Damien init.el)
@@ -89,4 +92,9 @@
 ;;(moi j'utilise use-package pour faire ça).
 
 (require 'pillar)
+
 (require 'jdee)
+
+(require 'guide-key)
+(setq guide-key/guide-key-sequence '("C-x r" "C-x 4"))
+(guide-key-mode 1)  ; Enable guide-key-mode
