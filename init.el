@@ -54,7 +54,6 @@
         (nxml-mode)
         (indent-region begin end)))
 
-
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/"))
@@ -98,3 +97,4 @@
 (require 'guide-key)
 (setq guide-key/guide-key-sequence '("C-x r" "C-x 4"))
 (guide-key-mode 1)  ; Enable guide-key-mode
+
