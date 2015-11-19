@@ -7,3 +7,4 @@
 (depends-on "helm") ;; selection/completion interface for everything
 (depends-on "jdee") ;; Java Development Environment for Emacs
 (depends-on "pillar") ;; Major mode for pier/pillar-formatted text files
+(depends-on "xquery-mode") ;;A simple mode for editing xquery programs
