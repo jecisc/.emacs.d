@@ -11,3 +11,5 @@ elpa
 #Files
 eshell/history
 eshell/lastdir
+
+perso/ #Do not save this folder
