@@ -68,6 +68,10 @@
 
 (mapc 'add-to-executable-path '("~/.cask/bin"))
 
+;; EasyPG
+(require 'epa-file)
+(epa-file-enable)
+
 
 ;; For now I add the each packages of cask, see the answer of Damien to improve
 
