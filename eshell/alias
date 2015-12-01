@@ -7,3 +7,5 @@ alias la ls -a
 
 alias .emacs cd ~/.emacs.d/
 alias M1 cd ~/TP/M1
+alias pharoImages cd ~/.local/share/Pharo/images
+alias pharoConfig cd ~/.config/pharo

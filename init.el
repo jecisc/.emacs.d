@@ -34,6 +34,16 @@
 ;; Make all "yes or no" prompts show "y or n" instead
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; Do not use gpg agent when runing in terminal
+;; This will allow to use a non-graphical password prompt for gpg
+(defadvice epg--start (around advice-epg-disable-agent activate)
+  (let ((agent (getenv "GPG_AGENT_INFO")))
+  (when (not (display-graphic-p))
+    (setenv "GPG_AGENT_INFO" nil))
+   ad-do-it
+   (when (not (display-graphic-p))
+     (setenv "GPG_AGENT_INFO" agent))))
+
 ;;PERSONNAL FUNCTIONS
 
 ;; Path (Copy of Damien init.el)
