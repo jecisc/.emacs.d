@@ -112,6 +112,10 @@
 
 (require 'xquery-mode)
 
+(require 'nix-mode)
+
+(require 'nixos-options)
+
 (require 'magit)
 (global-set-key (kbd "C-x C-g s") 'magit-status)
 (global-set-key (kbd "C-x C-g c ") 'magit-clone)
