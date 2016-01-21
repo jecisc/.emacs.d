@@ -3,6 +3,7 @@
 (source org)
 
 (depends-on "cask")
+(depends-on "dired-toggle-sudo")  ;;Browse directory with sudo privileges
 (depends-on "guide-key") ;; help you learn emacs
 (depends-on "helm") ;; selection/completion interface for everything
 (depends-on "jdee") ;; Java Development Environment for Emacs

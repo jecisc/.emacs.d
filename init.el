@@ -104,6 +104,8 @@
 ;;édites un fichier .pillar ou .pier. Mais tu pourras voir ça plus tard
 ;;(moi j'utilise use-package pour faire ça).
 
+(require 'dired-toggle-sudo)
+
 (require 'pillar)
 
 (require 'jdee)
