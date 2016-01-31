@@ -4,6 +4,7 @@
 
 (depends-on "cask")
 (depends-on "dired-toggle-sudo")  ;;Browse directory with sudo privileges
+(depends-on "exec-path-from-shell") ;;Get environment variables such as $PATH from the shell
 (depends-on "guide-key") ;; help you learn emacs
 (depends-on "helm") ;; selection/completion interface for everything
 (depends-on "jdee") ;; Java Development Environment for Emacs

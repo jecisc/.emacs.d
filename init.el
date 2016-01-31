@@ -78,6 +78,10 @@
 
 (mapc 'add-to-executable-path '("~/.cask/bin"))
 
+(require 'exec-path-from-shell)
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 ;; EasyPG
 (require 'epa-file)
 (epa-file-enable)
