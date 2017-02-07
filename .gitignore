@@ -1,5 +1,6 @@
 #Temp files
 *~
+**/.DS_STORE
 
 # Packaging
 .cask
