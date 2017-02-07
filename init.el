@@ -31,6 +31,9 @@
 ;; I add the lisp folder to the load path
 ;; (add-to-list 'load-path "~/.emacs.d/lisp/")
 
+;; line wraping
+(setq auto-fill-mode 1)
+
 ;; Make all "yes or no" prompts show "y or n" instead
 (fset 'yes-or-no-p 'y-or-n-p)
 
