@@ -1,0 +1,22 @@
+@import "../libs/variables"
+@import "../libs/mixins"
+
+body
+  +display-flex
+  +flex-direction(row)
+  background-color: $backgroundColor
+  color: $fontColor
+
+  .menu
+    +display-flex
+    +flex-direction(column)
+    +box(250px, 100%)
+    background: $menuColor url('images/overlay.png')
+    position: fixed
+    left: 0
+    top: 0
+    box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.1)
+    color: $menuFontColor
+    overflow-y: auto
+    text-align: right
+
