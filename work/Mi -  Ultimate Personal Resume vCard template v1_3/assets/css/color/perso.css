@@ -23,6 +23,31 @@ a:hover, a:focus,
 a{
 	color: #9C27B0;
 }
+
+.gallery-item .item-title .title {
+	text-align: center;
+}
+
+.gallery-item .item-title {
+	text-align: justify;
+}
+
+.social-media .icon-xs {
+	font-size: 18px;
+}
+
+.timeline .event-date{
+	font-size: 12px;
+}
+
+.timeline .event-name{
+	font-size: 16px;
+}
+
+.timeline .event-description{
+	font-size: 12px;
+}
+
 .bg-primary,
 .btn-primary,
 .progress-bar-primary,
