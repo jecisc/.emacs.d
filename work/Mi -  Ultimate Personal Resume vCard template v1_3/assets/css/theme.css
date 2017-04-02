@@ -832,6 +832,7 @@ Table of Contents:
 		transition: all 0.5s;
 		-webkit-transition: all 0.5s;
 		margin-bottom: 30px;
+		text-align: justify;
 	}
 
 	.post-item .post-content { margin-bottom: 0 }

@@ -17,7 +17,11 @@ a:hover, a:focus,
 #messenger-toggle,
 .btn-primary:hover, .btn-primary:focus,
 .icon-primary.icon-hover:hover, .icon-primary.icon-hover:focus {
-	color: #caa669; 
+	color: #9b7d4a;
+}
+
+a{
+	color: #caa669;
 }
 
 .bg-primary,

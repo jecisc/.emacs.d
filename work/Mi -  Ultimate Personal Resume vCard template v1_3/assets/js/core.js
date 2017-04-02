@@ -253,7 +253,7 @@ var Mi = {
             });
         },
         map: function() {
-
+/* TODO: customize*/
             function mapInitialize() {
 
                 var $googleMap = $('#google-map');
